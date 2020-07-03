@@ -79,8 +79,7 @@ app.get('/api/shorturl/:URLid', (req, res) => {
     if (err) console.error(err);
     return data.url;
   }).then((url) => {
-    console.log('url', url);
-    res.redirect(url);
+    res.redirect(url.url);
   });
 })
 
